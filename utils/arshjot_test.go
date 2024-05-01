@@ -29,7 +29,7 @@ func TestIsFileExist(t *testing.T) {
 		expectedOutput bool
 	}{
 		{"handlers.go", true},
-		{"map.go", true},
+		{"maps.go", true},
 		{"", true},
 		{"helper.go", true},
 		{"arshjot_test.go", true},
