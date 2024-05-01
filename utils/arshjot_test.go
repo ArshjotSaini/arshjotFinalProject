@@ -30,10 +30,10 @@ func TestIsFileExist(t *testing.T) {
 	}{
 		{"handlers.go", true},
 		{"maps.go", true},
-		{"", true},
+		{"", false},
 		{"helper.go", true},
 		{"arshjot_test.go", true},
-		{"./db/arshjot_final_project.db", true},
+		{"./db/arshjot_final_project.db", false},
 	}
 
 	for _, c := range cases {
