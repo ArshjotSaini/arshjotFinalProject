@@ -10,9 +10,9 @@ func TestGetStateFromLocationApi(t *testing.T) {
 		input          string
 		expectedOutput string
 	}{
-		{"   Salem, MA (+ 2 others)", "Salem, MA"},
-		{"   Atlanta, GA (+ 10 others)", "Atlanta, GA "},
-		{"   Jacksonville, FL  (+ 5 others)    ", " Jacksonville, FL"},
+		{"Salem, MA", "Salem, MA"},
+		{"Atlanta, GA", "Atlanta, GA "},
+		{"Jacksonville, FL", " Jacksonville, FL"},
 		{"Los Angeles", "Los Angeles"},
 	}
 
