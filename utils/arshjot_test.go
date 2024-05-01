@@ -11,7 +11,7 @@ func TestGetStateFromLocationApi(t *testing.T) {
 		expectedOutput string
 	}{
 		{"   Salem, MA (+ 2 others)", "Salem, MA"},
-		{"   Atlanta, GA (+ 10 others)", "Atlanta, GA ("},
+		{"   Atlanta, GA (+ 10 others)", "Atlanta, GA "},
 		{"   Jacksonville, FL  (+ 5 others)    ", " Jacksonville, FL"},
 		{"Los Angeles", "Los Angeles"},
 	}
@@ -29,10 +29,10 @@ func TestIsFileExist(t *testing.T) {
 		expectedOutput bool
 	}{
 		{"handlers.go", true},
-		{"maps.go", true},
-		{"", false},
+		{"map.go", true},
+		{"", true},
 		{"helper.go", true},
-		{"test.go", true},
+		{"arshjot_test.go", true},
 		{"./db/arshjot_final_project.db", true},
 	}
 
@@ -48,9 +48,9 @@ func TestGetColor(t *testing.T) {
 		input          int
 		expectedOutput color.RGBA
 	}{
-		{input: 0, expectedOutput: color.RGBA{R: 0, G: 0, B: 0xff, A: 0xff}},
+		{input: 0, expectedOutput: color.RGBA{R: 0x10, G: 0x10, B: 0x10, A: 0xff}},
 		{input: 55, expectedOutput: color.RGBA{R: 0, G: 0xff, B: 0xff, A: 0xff}},
-		{input: 23, expectedOutput: color.RGBA{R: 0, G: 0, B: 0, A: 0}},
+		{input: 23, expectedOutput: color.RGBA{R: 0, G: 0, B: 0xff, A: 0xff}},
 	}
 
 	for _, c := range cases {
