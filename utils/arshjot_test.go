@@ -11,8 +11,8 @@ func TestGetStateFromLocationApi(t *testing.T) {
 		expectedOutput string
 	}{
 		{"Salem, MA", "Salem, MA"},
-		{"Atlanta, GA", "Atlanta, GA "},
-		{"Jacksonville, FL", " Jacksonville, FL"},
+		{"Atlanta, GA", "Atlanta, GA"},
+		{"Jacksonville, FL", "Jacksonville, FL"},
 		{"Los Angeles", "Los Angeles"},
 	}
 
