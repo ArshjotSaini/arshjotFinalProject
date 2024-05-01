@@ -48,9 +48,9 @@ func TestGetColor(t *testing.T) {
 		input          int
 		expectedOutput color.RGBA
 	}{
-		{input: 0, expectedOutput: color.RGBA{R: 0x10, G: 0x10, B: 0x10, A: 0xff}},
+		{input: 0, expectedOutput: color.RGBA{R: 16, G: 16, B: 16, A: 255}},
 		{input: 55, expectedOutput: color.RGBA{R: 0, G: 0xff, B: 0xff, A: 0xff}},
-		{input: 23, expectedOutput: color.RGBA{R: 0, G: 0, B: 0xff, A: 0xff}},
+		{input: 23, expectedOutput: color.RGBA{R: 0, G: 0, B: 255, A: 255}},
 	}
 
 	for _, c := range cases {
