@@ -24,7 +24,7 @@ func main() {
 	// Serve static files from the "static" directory
 	router.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
 
-	// Start the HTTP server on port 8080 using the router
+	// Start the HTTP server on port 9090 using the router
 	fmt.Println("Server is listening on :9090...")
 	http.ListenAndServe(":9090", router)
 }

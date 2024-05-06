@@ -46,7 +46,7 @@ func MapHandler(w http.ResponseWriter, r *http.Request) {
 		var changedMapArr1 string
 		for _, value := range strings.Split(initValue, ",") {
 			// value = 45
-			changedMapArr1 += value + "," // 46,45,
+			changedMapArr1 += value + ","
 		}
 
 		details1 := FetchCompanyDataFromSelectedId(db_conn, changedMapArr1)
