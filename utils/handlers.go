@@ -42,6 +42,10 @@ func MapHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 		const IMAGEPATHUPDATE = "./assets/updatenameofimage.png"
 
+		// parsing form data
+		err := r.ParseForm()
+		ThrowHttpError(w, err)
+
 		initValue := r.Form.Get("changeMap")
 		var changedMapArr1 string
 		for _, value := range strings.Split(initValue, ",") {
